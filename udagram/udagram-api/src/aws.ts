@@ -1,13 +1,7 @@
 import AWS = require("aws-sdk");
 import { config } from "./config/config";
 
-// Configure AWS
-
-const credentials = new AWS.Credentials({
-  accessKeyId: config.aws_access_key,
-  secretAccessKey: config.aws_secret,
-});
-AWS.config.credentials = credentials;
+//Credentials are auto set according to the documentation https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/setting-credentials-node.html and the default profile is "Default anyway"
 
 export const s3 = new AWS.S3({
   signatureVersion: "v4",
@@ -15,7 +9,7 @@ export const s3 = new AWS.S3({
   params: { Bucket: config.aws_media_bucket },
   credentials: {
     accessKeyId: config.aws_access_key,
-    secretAccessKey: config.aws_secret,
+    secretAccessKey: config.aws_access_secret,
   },
 });
 
@@ -38,6 +32,5 @@ export function getPutSignedUrl(key: string): string {
     Bucket: config.aws_media_bucket,
     Key: key,
     Expires: signedUrlExpireSeconds,
-    ContentType: "application/octet-stream",
   });
 }
