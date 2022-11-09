@@ -6,7 +6,7 @@ orbs:
 jobs:
   build:
     docker:
-      - image: 'cimg/base:stable'
+      - image: "cimg/base:stable"
     steps:
       - node/install
       - checkout
@@ -14,22 +14,22 @@ jobs:
       - eb/setup
       - run:
           name: Install Back-End Dependencies
-          command: 'npm run backend:install'
+          command: "npm run backend:install"
       - run:
           name: Back-End Build
-          command: 'npm run backend:build'
+          command: "npm run backend:build"
       - run:
           name: Install Front-End Dependencies
-          command: 'npm run frontend:install'
+          command: "npm run frontend:install"
       - run:
           name: Front-End Build
-          command: 'npm run frontend:build'
+          command: "npm run frontend:build"
       - run:
           name: Deploy Backend
-          command: 'npm run backend:deploy'
+          command: "npm run backend:deploy"
       - run:
           name: Deploy Frontend
-          command: 'npm run frontend:deploy'
+          command: "npm run frontend:deploy"
 workflows:
   version: 2.1
   build:
@@ -37,4 +37,4 @@ workflows:
       - build:
           filters:
             branches:
-              only: master
+              only: main
