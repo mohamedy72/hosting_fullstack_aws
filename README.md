@@ -57,3 +57,7 @@ All you need is to run `npm i --legacy-peer-deps` then `npm run start` to serve 
 - Create one using this command `aws s3api create-bucket --bucket mohamed-udagram --region us-east-1`
 - Then build the frontend using `npm run build`
 - Finally run this command to upload **Archive.zip** to S3 bucket `aws s3 sync --acl public-read ./www s3://mohamed-udagram/`
+
+___
+
+> In case running into a **degraded** eb environment, run this command from terminal `eb deploy udagram-api-dev`
