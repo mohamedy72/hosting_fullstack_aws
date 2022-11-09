@@ -1,3 +1,5 @@
+![Udagram Banner](/docs/screenshots/udagram.png)
+
 # Hosting Fullstack Application on AWS
 
 This project is part of Udacity - Back-end nanodegree and it's the third project out of 3 technical projects. In this project, we were asked to deploy a pre-provided web application called _Udagram_ to AWS.
