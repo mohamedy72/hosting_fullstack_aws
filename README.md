@@ -8,7 +8,7 @@ This project is part of Udacity - Back-end nanodegree and it's the third project
 
 Link to Front-end: http://mohamed-udagram.s3-website-us-east-1.amazonaws.com
 
-Link to Back-end: http://udagram-api-env.eba-erzmjap3.us-east-1.elasticbeanstalk.com
+Link to Back-end: http://udagram-api-env.eba-agtpnanf.us-east-1.elasticbeanstalk.com
 
 ## CircleCI status
 
@@ -60,6 +60,6 @@ All you need is to run `npm i --legacy-peer-deps` then `npm run start` to serve 
 - Then build the frontend using `npm run build`
 - Finally run this command to upload **Archive.zip** to S3 bucket `aws s3 sync --acl public-read ./www s3://mohamed-udagram/`
 
-___
+---
 
 > In case running into a **degraded** eb environment, run this command from terminal `eb deploy udagram-api-dev`
